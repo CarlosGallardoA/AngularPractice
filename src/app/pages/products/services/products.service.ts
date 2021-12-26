@@ -13,4 +13,7 @@ export class ProductsService {
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.productsUrl);
   }
+  updateStock(productId: number, stock:number):Observable<any>{
+    return this.http.patch(`${this.productsUrl}/${productId}`,{stock});
+  }
 }

@@ -1,5 +1,6 @@
 {
-  "stores": [{
+  "stores": [
+    {
       "id": 1,
       "name": "Park Row at Beekman St",
       "address": "38 Park Row",
@@ -35,7 +36,8 @@
       "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
     }
   ],
-  "categories": [{
+  "categories": [
+    {
       "id": 1,
       "name": "Books"
     },
@@ -48,7 +50,8 @@
       "name": "Computers"
     }
   ],
-  "products": [{
+  "products": [
+    {
       "id": 1,
       "name": "Essential TypeScript 4: From Beginner to Pro",
       "price": 45,
@@ -62,7 +65,7 @@
       "price": 5,
       "description": "En Hackeando del cerebro de tus compradores, Corti nos revela cómo muchas compañías crean productos digitales o procesos de venta capaces de conectar con la psicología del comprador.",
       "categoryId": 1,
-      "stock": 10
+      "stock": 9
     },
     {
       "id": 3,
@@ -113,18 +116,111 @@
       "stock": 10
     }
   ],
-  "orders": [{
-    "id": 1,
-    "name": "Dominicode",
-    "date": "01/12/1995",
-    "shippingAddress": "Av. de la Granvia de Hospitalet, 115",
-    "city": "Barcelona",
-    "pickup": true
-  }],
-  "detailsOrders": [{
-    "id": 1,
-    "orderId": 1,
-    "quantity": 10,
-    "productName": "Product name"
-  }]
+  "orders": [
+    {
+      "id": 1,
+      "name": "Dominicode",
+      "date": "01/12/1995",
+      "shippingAddress": "Av. de la Granvia de Hospitalet, 115",
+      "city": "Barcelona",
+      "pickup": true
+    },
+    {
+      "name": "dasdasdas",
+      "store": {
+        "id": 2,
+        "name": "Store Alcalá",
+        "address": "Calle de Alcalá, 21",
+        "city": "Madrid",
+        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
+      },
+      "date": "25/12/2021",
+      "pickedUp": false,
+      "id": 2
+    },
+    {
+      "name": "Scarface",
+      "store": "",
+      "date": "25/12/2021",
+      "pickedUp": false,
+      "id": 3
+    },
+    {
+      "name": "Scarface",
+      "store": {
+        "id": 4,
+        "name": "Covent Garden - Russell St",
+        "address": "10 Russell Street",
+        "city": "London",
+        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
+      },
+      "date": "25/12/2021",
+      "pickedUp": false,
+      "id": 4
+    },
+    {
+      "name": "Scarface",
+      "store": {
+        "id": 3,
+        "name": "Chambers and West Broadway",
+        "address": "125 Chambers Street",
+        "city": "New York",
+        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
+      },
+      "date": "25/12/2021",
+      "isDelivery": false,
+      "id": 5
+    }
+  ],
+  "detailsOrders": [
+    {
+      "id": 1,
+      "orderId": 1,
+      "quantity": 10,
+      "productName": "Product name"
+    },
+    {
+      "details": [
+        {
+          "productId": 1,
+          "productName": "Essential TypeScript 4: From Beginner to Pro",
+          "quantity": 1
+        },
+        {
+          "productId": 2,
+          "productName": "Hackeando el cerebro de tus compradores: PsychoGrowth",
+          "quantity": 1
+        }
+      ],
+      "orderId": 2,
+      "id": 2
+    },
+    {
+      "details": [
+        {
+          "productId": 3,
+          "productName": "Angular Routing: Learn To Create client-side and SPA with Routing and Navigation",
+          "quantity": 1
+        }
+      ],
+      "orderId": 3,
+      "id": 3
+    },
+    {
+      "details": [
+        {
+          "productId": 2,
+          "productName": "Hackeando el cerebro de tus compradores: PsychoGrowth",
+          "quantity": 2
+        }
+      ],
+      "orderId": 4,
+      "id": 4
+    },
+    {
+      "details": [],
+      "orderId": 5,
+      "id": 5
+    }
+  ]
 }
