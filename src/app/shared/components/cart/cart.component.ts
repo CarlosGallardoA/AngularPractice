@@ -15,9 +15,8 @@ import { ShoppingCartService } from '../../services/shopping-cart.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-   quantity$ = this.shoppingCartSvs.quantityAction$;
+  quantity$ = this.shoppingCartSvs.quantityAction$;
   total$ = this.shoppingCartSvs.totalAction$;
-  cart$ = this.shoppingCartSvs.cartAction$
   constructor(private shoppingCartSvs: ShoppingCartService) { }
 
   ngOnInit(): void {

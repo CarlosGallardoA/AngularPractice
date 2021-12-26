@@ -70,13 +70,9 @@ export class CheckoutComponent implements OnInit {
     });
     return details;
   }
-    
-
-
   private getDataCart():void{
     this.shoppingCartSvc.cartAction$.pipe(
       tap((products: Product[]) => this.cart = products)
     ).subscribe();
   }
-
 }
